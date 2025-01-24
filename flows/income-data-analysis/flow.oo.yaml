@@ -1,0 +1,58 @@
+nodes:
+  - task: self::column_number_filter
+    node_id: column_number_filter#2
+    inputs_from:
+      - handle: df
+        value:
+        from_node:
+          - node_id: read_csv_to_df#2
+            output_handle: df
+      - handle: column_name
+        value: income
+      - handle: min_threshold
+        value: 15000
+      - handle: max_threshold
+        value: 20000
+  - task: self::plot_bar_chart
+    node_id: plot_bar_chart#3
+    inputs_from:
+      - handle: df
+        value:
+        from_node:
+          - node_id: column_number_filter#2
+            output_handle: df
+      - handle: y_column
+        value: life expectancy
+      - handle: color
+        value: "#62B0E3"
+      - handle: title
+        value: country & life expectancy
+      - handle: x_column
+        value: country
+  - task: self::df_save_as_csv
+    node_id: df_save_as_csv#1
+    inputs_from:
+      - handle: csv_address
+        value: /oomol-driver/oomol-storage
+      - handle: df
+        value:
+        from_node:
+          - node_id: plot_bar_chart#3
+            output_handle: df
+      - handle: name
+        value: new_income.csv
+  - task: self::read_csv_to_df
+    title: "read_csv_to_df #2"
+    node_id: read_csv_to_df#2
+    inputs_from:
+      - handle: csv
+        value: /oomol-driver/oomol-storage/data.csv
+        from_node:
+          - node_id: url-download-to-path#1
+            output_handle: adress
+  - task: read-file::url-download-to-path
+    title: "Url Download To Path #1"
+    node_id: url-download-to-path#1
+    inputs_from:
+      - handle: url
+        value: https://oomol-flows.oss-cn-hangzhou.aliyuncs.com/data_test.csv

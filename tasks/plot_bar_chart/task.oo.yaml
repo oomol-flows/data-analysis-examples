@@ -1,0 +1,49 @@
+inputs_def:
+  - handle: df
+    json_schema:
+      type:
+        - string
+        - number
+        - integer
+        - boolean
+        - object
+        - array
+        - "null"
+      contentMediaType: oomol/var
+  - handle: title
+    json_schema:
+      type: string
+  - handle: x_column
+    json_schema:
+      type: string
+  - handle: y_column
+    json_schema:
+      type: string
+  - handle: color
+    json_schema:
+      type: string
+      ui:widget: color
+      ui:options:
+        colorType: HEX
+    value: "#3336c5"
+outputs_def:
+  - handle: df
+    description: Output
+    json_schema:
+      contentMediaType: oomol/var
+      type:
+        - string
+        - number
+        - integer
+        - boolean
+        - object
+        - array
+        - "null"
+icon: ":fa6-solid:chart-column:currentColor:"
+ui:
+  default_width: 530
+executor:
+  name: python
+  options:
+    spawn: false
+    entry: main.py

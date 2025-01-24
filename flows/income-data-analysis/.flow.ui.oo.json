@@ -1,0 +1,46 @@
+{
+  "nodes": {
+    "column_number_filter#2": {
+      "rfNode": {
+        "position": {
+          "x": 1028,
+          "y": 13.5
+        }
+      }
+    },
+    "plot_bar_chart#3": {
+      "rfNode": {
+        "position": {
+          "x": 1512,
+          "y": 0
+        }
+      }
+    },
+    "df_save_as_csv#1": {
+      "rfNode": {
+        "position": {
+          "x": 1996,
+          "y": 27
+        }
+      }
+    },
+    "read_csv_to_df#2": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 514,
+          "y": 54
+        }
+      }
+    },
+    "url-download-to-path#1": {
+      "contentWidth": 450,
+      "rfNode": {
+        "position": {
+          "x": 0,
+          "y": 37
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+inputs_def:
+  - handle: csv
+    description: Input
+    json_schema:
+      type: string
+      ui:widget: file
+outputs_def:
+  - handle: df
+    description: Output
+    json_schema:
+      contentMediaType: oomol/var
+ui:
+  default_width: 450
+executor:
+  name: python
+  options:
+    spawn: false
+    entry: main.py
+title: read_csv_to_df
+icon: ":fa6-solid:file-import:"
