@@ -9,7 +9,8 @@ scripts:
 dependencies:
   read-file: 0.0.1
 name: data-analysis-examples
-version: 0.0.3
+version: 0.0.4
 displayName: Data Analysis Examples
 description: Shows previews of graphs and tables in workflows
 releaseNotes: add code repo
+repository: https://github.com/oomol-flows/data-analysis-examples
