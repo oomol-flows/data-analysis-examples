@@ -11,7 +11,6 @@ inputs_def:
         - object
         - array
         - "null"
-    value: ""
   - handle: csv_address
     json_schema:
       type: string

@@ -11,19 +11,15 @@ inputs_def:
         - object
         - array
         - "null"
-    value: ""
   - handle: column_name
     json_schema:
-      contentMediaType: oomol/var
       type: string
   - handle: start_date
     json_schema:
-      contentMediaType: oomol/var
       type: string
       format: date-time
   - handle: end_date
     json_schema:
-      contentMediaType: oomol/var
       type: string
       format: date-time
 outputs_def:
@@ -39,7 +35,7 @@ outputs_def:
         - object
         - array
         - "null"
-icon: ":fa6-solid:filter:currentColor:"
+icon: ":fa6-solid:calendar-days:"
 ui:
   default_width: 530
 executor:

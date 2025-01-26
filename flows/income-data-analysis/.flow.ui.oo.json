@@ -41,6 +41,15 @@
           "y": 37
         }
       }
+    },
+    "column_date_filter#1": {
+      "contentWidth": 530,
+      "rfNode": {
+        "position": {
+          "x": 1160.6292491428264,
+          "y": 433.5474666493768
+        }
+      }
     }
   }
 }

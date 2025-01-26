@@ -11,10 +11,8 @@ inputs_def:
         - object
         - array
         - "null"
-    value: ""
   - handle: column_name
     json_schema:
-      contentMediaType: oomol/var
       type: string
 outputs_def:
   - handle: df

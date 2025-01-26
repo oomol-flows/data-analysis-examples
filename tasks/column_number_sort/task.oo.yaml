@@ -11,18 +11,19 @@ inputs_def:
         - object
         - array
         - "null"
-    value: ""
   - handle: column_name
     json_schema:
-      contentMediaType: oomol/var
       type: string
   - handle: sort_type
     json_schema:
-      contentMediaType: oomol/var
-      type: string
       enum:
         - Ascending
         - Descending
+      ui:options:
+        labels:
+          - Ascending
+          - Descending
+    value: Ascending
 outputs_def:
   - handle: df
     description: Output
